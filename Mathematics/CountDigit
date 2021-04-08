@@ -1,0 +1,21 @@
+/*package whatever //do not write package name here */
+
+import java.io.*;
+
+class GFG {
+    public static int countDigit(long n)
+    {
+        int c=0;
+        while(n!=0)
+        {
+            n=n/10;
+            c++;
+        }
+        return c;
+        
+    }
+	public static void main (String[] args) {
+	    System.out.println(countDigit(123456789));
+		
+	}
+}
