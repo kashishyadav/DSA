@@ -3,6 +3,12 @@
 import java.io.*;
 
 class GFG {
+
+    public static int LogCount(long n)
+    {
+        return (int)Math.floor(Math.log10(n))+1;
+       
+    }
     public static int countDigit(long n)
     {
         int c=0;
@@ -13,6 +19,14 @@ class GFG {
         }
         return c;
         
+    }
+     public static int countRecursion(long n)
+    {
+        
+        if(n<=0)
+        return 0;
+        
+        return (1+countRecursion(n/10));
     }
 	public static void main (String[] args) {
 	    System.out.println(countDigit(123456789));
